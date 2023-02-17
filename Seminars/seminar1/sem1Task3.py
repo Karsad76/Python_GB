@@ -6,9 +6,9 @@
 import math
 
 # input data
-qtyScoolboyss1 = int(input("Введите кол-во учеников первого класса: "))
-qtyScoolboyss2 = int(input("Введите кол-во учеников второго класса: "))
-qtyScoolboyss3 = int(input("Введите кол-во учеников третьего класса: "))
+qtyScoolboys1 = int(input("Введите кол-во учеников первого класса: "))
+qtyScoolboys2 = int(input("Введите кол-во учеников второго класса: "))
+qtyScoolboys3 = int(input("Введите кол-во учеников третьего класса: "))
 
 print("Необходимо парт:", math.ceil(
-    (qtyScoolboyss1+qtyScoolboyss2+qtyScoolboyss3)/2))
+    (qtyScoolboys1 + qtyScoolboys2 + qtyScoolboys3) / 2))

@@ -9,6 +9,6 @@ numStart = int(input("Какой по счету вагон с головы по
 numCarriage = int(input("Номер вагона поезда: "))
 
 if numStart != numCarriage:
-    print("Кол-во вагонов в поезде:", (numCarriage+numStart-1))
+    print("Кол-во вагонов в поезде:", (numCarriage + numStart - 1))
 else:
     print("Нужно чуть больше информации")
