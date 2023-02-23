@@ -5,7 +5,8 @@ num = abs(int(input("Введите любое 3х значное число: ")
 
 # checking numbers of digits and output the sum of its
 if 99 < abs(num) < 1000:
-    print(int(num % 10 + ((num % 100 - num % 10) / 10) +
-          (num % 1000 - num % 100) / 100))
+    sum = round(num % 10 + ((num % 100 - num % 10) / 10) +
+                (num % 1000 - num % 100) / 100)
+    print(f'Сумма цифр числа {num} = {sum}')
 else:
-    print("Введенное число не 3х значное")
+    print(f"Введенное число {num} не 3х значное")
