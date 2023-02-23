@@ -4,3 +4,18 @@
 # первых трех цифр равна сумме последних трех. Т.е. билет с номером
 # 385916 – счастливый, т.к. 3+8+5=9+1+6. Вам требуется написать
 # программу, которая проверяет счастливость билета.
+
+# input data prompt
+t_num = input("Введите 6-ти значный номер билета: ")
+
+# checking the correctness of the entered data
+if len(t_num) == 6:
+    
+    # checking the equality of the sum of numbers and output result
+    if (int(t_num[0]) + int(t_num[1]) + int(t_num[2]) ==
+            int(t_num[3]) + int(t_num[4]) + int(t_num[5])):
+        print(f"Билет №{t_num} счастливый!")
+    else:
+        print(f"Билет №{t_num} несчастливый((")
+else:
+    print(f"Введенный №{t_num} не 6-ти значный. Попробуйте еще раз")
