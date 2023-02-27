@@ -4,3 +4,20 @@
 перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной.
 Выведите минимальное количество монет, которые нужно перевернуть.
 """
+
+coins_qty = int(input("Введите общее кол-во монеток: "))
+count_head = 0
+count_tail = 0
+
+for i in range(coins_qty):
+    next_coin = int(
+        input("Введите сторону следующей монетки (0 - орел, 1 - решка): "))
+    if next_coin == 0:
+        count_head += 1
+    else:
+        count_tail += 1
+
+if count_head > count_tail:
+    print(f"Необходимо перевернуть {count_tail} шт")
+else:
+    print(f"Необходимо перевернуть {count_head} шт")
