@@ -5,9 +5,9 @@
 
 n = int(input("Введите натуральное число: "))
 i = 0
-list = []
+l = []
 while 2 ** i <= n:
     # print(2 ** i)
-    list.append(2 ** i)
+    l.append(2 ** i)
     i += 1
-print(*list)
+print(f"Степени 2 до {n}:", *l)

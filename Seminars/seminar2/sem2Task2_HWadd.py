@@ -4,3 +4,12 @@
 Для решения используйте цикл while и только арифметические операции.
 Не используйте взятие по индексу.
 """
+
+num = int(input("Введите целое число: "))
+
+max_digit = 0
+while num >= 1:
+    if max_digit < num % 10:
+        max_digit = num % 10
+    num = int(num / 10)
+print(max_digit)
