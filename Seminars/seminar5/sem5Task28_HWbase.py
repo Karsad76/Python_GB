@@ -4,3 +4,16 @@
 Из всех арифметических операций допускаются только +1 и -1. 
 Также нельзя использовать циклы.
 """
+
+num1 = int(input("Введите натуральное число: "))
+num2 = int(input("Введите еще одно натуральное число: "))
+
+
+def sum_calc_rec(arg1, arg2):
+    if arg2 == 0:
+        return arg1
+    else:
+        return sum_calc_rec(arg1, arg2 - 1) + 1
+
+
+print(f"{num1}+{num2}={sum_calc_rec(num1, num2)}")

@@ -6,3 +6,21 @@
 Результат нужно сверить с правой частью.
 Решите через рекурсию. В задании нельзя применять циклы.
 """
+
+print('Проверяем равенство "1+2+...+n = n(n+1)/2"')
+num = int(input("Введите любое натуральное число n: "))
+
+
+def set_numbers_sum_rec(arg1):
+    if arg1 <= 1:
+        return arg1
+    else:
+        return arg1 + set_numbers_sum_rec(arg1 - 1)
+
+
+if set_numbers_sum_rec(num) == num * (num + 1) / 2:
+    print(
+        f"{set_numbers_sum_rec(num)} = {int(num * (num + 1) / 2)}. "
+        f"Равенство верно!")
+else:
+    print("Вы нашли опровержение")
