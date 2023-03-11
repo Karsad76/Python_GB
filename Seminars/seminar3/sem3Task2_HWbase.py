@@ -6,3 +6,19 @@
 Если в рейтинге существуют элементы с одинаковыми значениями,
 то новый элемент с тем же значением должен разместиться после них.
 """
+
+rating = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+print(rating)
+for i in range(0, 50):
+    a = int(input("Введите новый элемент рейтинга (или 'q' для останова): "))
+    if str(a) == "q":
+        print("Конец программы")
+        break
+    else:
+        if a == 0:
+            rating.append(a)
+        for j in rating:
+            if a > j:
+                rating.insert(rating.index(j), a)
+                break
+    print(rating)
