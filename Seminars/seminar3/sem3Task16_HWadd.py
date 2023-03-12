@@ -4,3 +4,14 @@
 натуральное число N – количество элементов в массиве. В последующих
 строках записаны N целых чисел Ai. Последняя строка содержит число X
 """
+
+s = input("Введите элементы массива через пробел: ")
+array = [int(x) for x in s.split()]
+search_num = int(input("Введите искомое число: "))
+
+count = 0
+for i in range(len(array)):
+    if search_num == array[i]:
+        count += 1
+print(f"Найдено: {count}")
+print(array)

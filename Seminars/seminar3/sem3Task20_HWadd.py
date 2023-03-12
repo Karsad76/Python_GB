@@ -17,6 +17,37 @@
 ● Ш, Э, Ю – 8 очков;
 ● Ф, Щ, Ъ – 10 очков.
 Напишите программу, которая вычисляет стоимость введенного пользователем слова.
-Будем считать, что на вход подается только одно слово, которое содержит либо только
-английские, либо только русские буквы.
+Будем считать, что на вход подается только одно слово, которое содержит либо
+только английские, либо только русские буквы.
 """
+
+
+lit_weight1 = (
+'A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О',
+'Р', 'С', 'Т')
+lit_weight2 = ('D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У')
+lit_weight3 = ('B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я')
+lit_weight4 = ('F', 'H', 'V', 'W', 'Y', 'Й', 'Ы')
+lit_weight5 = ('K', 'Ж', 'З', 'Х', 'Ц', 'Ч')
+lit_weight8 = ('J', 'X', 'Ш', 'Э', 'Ю')
+lit_weight10 = ('Q', 'Z', 'Ф', 'Щ', 'Ъ')
+
+word = input("Введите слово: ")
+word_weight = 0
+for i in word.upper():
+    if i in lit_weight1:
+        word_weight += 1
+    elif i in lit_weight2:
+        word_weight += 2
+    elif i in lit_weight3:
+        word_weight += 3
+    elif i in lit_weight4:
+        word_weight += 4
+    elif i in lit_weight5:
+        word_weight += 5
+    elif i in lit_weight8:
+        word_weight += 8
+    elif i in lit_weight10:
+        word_weight += 10
+
+print(f"Стоимость слова - {word_weight}")
