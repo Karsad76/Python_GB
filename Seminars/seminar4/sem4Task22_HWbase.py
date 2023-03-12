@@ -6,3 +6,20 @@
 m - кол-во элементов второго множества. Затем пользователь вводит сами 
 элементы множеств
 """
+
+# initialize sets
+arr1 = arr2 = set()
+
+# filling sets with data
+arr1 = set(
+    int(x) for x in
+    input("Введите эл-ты 1го множества через пробел: ").split())
+
+arr2 = set(
+    int(x) for x in
+    input("Введите эл-ты 2го множества через пробел: ").split())
+
+# find the intersection of sets and sort the result
+res_arr = list(arr1 & arr2)
+res_arr.sort()
+print(res_arr)

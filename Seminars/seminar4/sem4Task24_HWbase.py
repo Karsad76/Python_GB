@@ -12,3 +12,19 @@
 собрать за один заход собирающий модуль, находясь перед некоторым кустом
 заданной во входном файле грядки.
 """
+
+n = int(input("Введите кол-во кустов на грядке: "))
+arr = list(int(x) for x in
+           input(
+               f"Введите через пробел кол-во ягод на каждом"
+               f" из {n} кустов: ").split())
+
+arr_count_berries = list()
+
+for i in range(len(arr) - 1):
+    arr_count_berries.append(arr[i] + arr[i - 1] + arr[i + 1])
+arr_count_berries.append(arr[0] + arr[-1] + arr[-2])
+
+print(
+    f"Максимальное кол-во ягод, которое можно собрать с 3х кустов рядом"
+    f" - {max(arr_count_berries)}")
