@@ -13,8 +13,6 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
-    _length = 0
-    _width = 0
     weight = 2400 * 0.01
     depth = 5
 
@@ -23,7 +21,7 @@ class Road:
         self._width = w
 
     def total_weight(self):
-        tw = self._length * self._width * self.weight * self.depth
+        tw = self._length * self._width * Road.weight * Road.depth
         print(f"Полная масса асфальта для покрытия толщиной 5см = {tw} кг")
 
 

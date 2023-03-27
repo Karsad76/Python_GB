@@ -19,15 +19,21 @@ class Matrix():
     def __str__(self):
         for i in self.mtrx:
             print(i)
+        return ""
 
     def __add__(self, other):
-        res_mtrx = [[self.mtrx[i][j] + other[i][j] for j in range
-                    (len(self.mtrx[0]))] for i in range(len(self.mtrx))]
+        res_mtrx = []
+        for sublist in zip(self.mtrx, other):
+            temp = []
+            for numbers in zip(sublist[0], sublist[1]):
+                temp.append(sum(numbers))
+            res_mtrx.append(temp)
 
         for r in res_mtrx:
             print(r)
+        return ""
 
 
 m1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-m1.__str__()
-m1.__add__([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
+print(m1)
+print(m1 + [[9, 8, 7], [6, 5, 4], [3, 2, 1]])
