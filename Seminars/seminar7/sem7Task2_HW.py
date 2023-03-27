@@ -10,3 +10,21 @@ length (длина в метрах), width (ширина в метрах).
 Массу и толщину сделать публичными атрибутами.
 Проверить работу метода.
 """
+
+
+class Road:
+    weight = 2400 * 0.01
+    depth = 5
+
+    def __init__(self, l, w):
+        self._length = l
+        self._width = w
+
+    def total_weight(self):
+        tw = self._length * self._width * Road.weight * Road.depth
+        print(f"Полная масса асфальта для покрытия толщиной 5см = {tw} кг")
+
+
+a = Road(int(input("Введите длину дороги в м: ")),
+         int(input("Введите ширину дороги в м: ")))
+a.total_weight()
