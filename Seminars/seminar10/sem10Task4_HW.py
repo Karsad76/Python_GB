@@ -14,9 +14,9 @@ words = ['разработка', 'администрирование', 'protocol
 for i in words:
     print(i, type(i))
 
-    a = i.encode('unicode-escape')
+    a = i.encode('utf-8')
     print(a, {type(a)})
 
-    a = a.decode('unicode-escape')
+    a = a.decode('utf-8')
     print(a, {type(a)})
     print()
