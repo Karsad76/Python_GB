@@ -16,3 +16,19 @@
 кодовых точек
 --- используйте списки и циклы, не дублируйте функции
 """
+import json
+
+words = ['разработка', 'сокет', 'декоратор']
+
+for i in words:
+    print(i, type(i))
+
+    # var.1 encode/decode literal to unicode code points
+    a = i.encode('unicode-escape').decode('utf-8')
+    print(f"encode/decode: {a}, {type(a)}, "
+          f"{a.encode('utf-8').decode('unicode-escape')}")
+
+    # var.2 encode/decode literal to unicode code points (via JSON module)
+    b = json.dumps(i)
+    print(f'JSON-string:  {b}, {type(b)}, {json.loads(b)}')
+    print()

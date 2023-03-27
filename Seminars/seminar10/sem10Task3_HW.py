@@ -10,3 +10,12 @@ decode).
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+
+words = ["attribute", "класс", "функция", "type"]
+
+for i in words:
+    try:
+        a = bytes(i, 'ascii')
+        print(a, type(a), len(a))
+    except UnicodeEncodeError:
+        print(f"'{i}' нельзя записать в байтовом формате с префиксом b'")

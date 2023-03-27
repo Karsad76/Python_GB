@@ -10,3 +10,8 @@
 --- b'class' - используйте маркировку b''
 --- используйте списки и циклы, не дублируйте функции
 """
+
+words = [b"class", b"function", b"method"]
+
+for i in words:
+    print(i, type(i), len(i))
